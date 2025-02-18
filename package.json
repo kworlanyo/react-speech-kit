@@ -3,6 +3,12 @@
   "version": "3.0.1",
   "description": "React hooks for in-browser Speech Recognition and Speech Synthesis.",
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "exports": {
+    "import": "./dist/index.es.js",
+    "require": "./dist/index.js"
+  },
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "babel src -d dist --copy-files",
     "start": "webpack-dev-server --mode development",
@@ -16,7 +22,7 @@
   "license": "MIT",
   "peerDependencies": {
     "prop-types": "^15.7.2",
-     "react": ">=16.8.0 || ^19.0.0"
+    "react": ">=16.8.0 || ^19.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
